@@ -1,0 +1,160 @@
+/* background and glowing header inspired by Adam Kuca - codepen adkuca https://codepen.io/adkuca/project/editor/DVLeNd*/
+
+body {
+    text-align: center;
+		background: repeating-linear-gradient(
+      45deg,
+      #2b2b2b 0%,
+      #2b2b2b 10%,
+      #222222 0%,
+      #222222 50%
+    )
+    0 / 15px 15px;
+		color: #EB56F7
+}
+
+header {
+  border-bottom: 2px solid #240522;
+  border-left: 2px solid #240522;
+  border-right: 2px solid #240522;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0 2px 15px 0 rgba(177, 73, 175, 0.3),
+    inset 0 2px 2px 0 rgba(177, 73, 175, 0.1);
+  padding-bottom: 10px;
+  margin: 0 15% 45px 15%;
+  order: 0;
+  flex: 0 1 100%;
+}
+
+#header-text {
+  font-family: Monoton, Arial, Helvetica, sans-serif;
+  font-size: 65px;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header-glow {
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+p {
+	margin: 0;
+	font-family: Monoton;
+  font-size: 50px;
+  margin: 0.2em;
+}
+
+h2 {
+    margin: 1em 0 0.25em;
+	 	font-size: 30px;
+}
+
+h2:first-of-type {
+  margin-top: 0.5em;
+}
+
+#sizePicker {
+	font-size: 25px;
+}
+
+input[type=color] {
+  width: 10em;
+  height: 3em;
+}
+
+input[type=number] {
+  width: 8em;
+	height: 3em;
+  border-radius: 5%;
+}
+
+/*input[min=1] {
+  width: 8em;
+	height: 3em;
+}*/
+
+input[type=submit] {
+  width: 8em;
+  height: 50em;
+}
+
+table,
+tr,
+td {
+  border: 1px solid black;
+}
+
+table {
+		box-shadow: 0 2px 15px 0 rgba(177, 73, 175, 0.3);
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tr {
+    height: 20px;
+}
+
+td {
+    width: 20px;
+}
+
+
+
+
+/* NEON HEADER */
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 5px rgba(177, 73, 175, 0.7),
+      0 0 10px rgba(177, 73, 175, 0.7), 0 0 20px rgba(177, 73, 175, 0.7),
+      0 0 30px rgba(177, 73, 175, 0.7), 0 0 60px rgba(177, 73, 175, 0.7),
+      0 0 70px rgba(177, 73, 175, 0.7), 0 0 90px rgba(177, 73, 175, 0.7),
+      0 0 140px rgba(177, 73, 175, 0.7);
+  }
+  to {
+    text-shadow: 0 0 2px rgba(177, 73, 175, 0.7),
+      0 0 5px rgba(177, 73, 175, 0.7), 0 0 12px rgba(177, 73, 175, 0.7),
+      0 0 15px rgba(177, 73, 175, 0.7), 0 0 25px rgba(177, 73, 175, 0.7),
+      0 0 35px rgba(177, 73, 175, 0.7), 0 0 45px rgba(177, 73, 175, 0.7),
+      0 0 60px rgba(177, 73, 175, 0.7);
+  }
+}
+
+@-moz-keyframes neon1 {
+  from {
+    text-shadow: 0 0 5px rgba(177, 73, 175, 0.7),
+      0 0 10px rgba(177, 73, 175, 0.7), 0 0 20px rgba(177, 73, 175, 0.7),
+      0 0 30px rgba(177, 73, 175, 0.7), 0 0 60px rgba(177, 73, 175, 0.7),
+      0 0 70px rgba(177, 73, 175, 0.7), 0 0 90px rgba(177, 73, 175, 0.7),
+      0 0 140px rgba(177, 73, 175, 0.7);
+  }
+  to {
+    text-shadow: 0 0 2px rgba(177, 73, 175, 0.7),
+      0 0 5px rgba(177, 73, 175, 0.7), 0 0 12px rgba(177, 73, 175, 0.7),
+      0 0 15px rgba(177, 73, 175, 0.7), 0 0 25px rgba(177, 73, 175, 0.7),
+      0 0 35px rgba(177, 73, 175, 0.7), 0 0 45px rgba(177, 73, 175, 0.7),
+      0 0 60px rgba(177, 73, 175, 0.7);
+  }
+}
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 5px rgba(177, 73, 175, 0.7),
+      0 0 10px rgba(177, 73, 175, 0.7), 0 0 20px rgba(177, 73, 175, 0.7),
+      0 0 30px rgba(177, 73, 175, 0.7), 0 0 60px rgba(177, 73, 175, 0.7),
+      0 0 70px rgba(177, 73, 175, 0.7), 0 0 90px rgba(177, 73, 175, 0.7),
+      0 0 140px rgba(177, 73, 175, 0.7);
+  }
+  to {
+    text-shadow: 0 0 2px rgba(177, 73, 175, 0.7),
+      0 0 5px rgba(177, 73, 175, 0.7), 0 0 12px rgba(177, 73, 175, 0.7),
+      0 0 15px rgba(177, 73, 175, 0.7), 0 0 25px rgba(177, 73, 175, 0.7),
+      0 0 35px rgba(177, 73, 175, 0.7), 0 0 45px rgba(177, 73, 175, 0.7),
+      0 0 60px rgba(177, 73, 175, 0.7);
+  }
+}
