@@ -1,6 +1,6 @@
 # Pixel Art Maker Project
 
-[Live Demo :target="_blank"](https://mccleary.github.io/Pixel-Art-Maker/)
+[Live Demo](:target="_blank" https://mccleary.github.io/Pixel-Art-Maker/)
 
 ## Table of Contents
 
