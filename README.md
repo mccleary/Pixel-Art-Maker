@@ -1,5 +1,7 @@
 # Pixel Art Maker Project
 
+[click here to view live](https://mccleary.github.io/Pixel-Art-Maker/)
+
 ## Table of Contents
 
 * [Instructions](#instructions)
