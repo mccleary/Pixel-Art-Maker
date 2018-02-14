@@ -1,16 +1,15 @@
-/* background and glowing header inspired by Adam Kuca */
+/* glowing header inspired by Adam Kuca */
 
 body {
     text-align: center;
-		background: repeating-linear-gradient(
-      45deg,
-      #2b2b2b 0%,
-      #2b2b2b 10%,
-      #222222 0%,
-      #222222 50%
-    )
-    0 / 15px 15px;
-		color: #EB56F7
+}
+
+html {
+  background: url("https://png.pngtree.com/thumb_back/fw800/back_pic/04/01/15/08580066565256e.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  color: white;
 }
 
 header {
@@ -53,6 +52,7 @@ p {
 h2 {
     margin: 1em 0 0.25em;
 	 	font-size: 30px;
+    background-repeat: ;
 }
 
 h2:first-of-type {
@@ -74,10 +74,6 @@ input[type=number] {
   border-radius: 5%;
 }
 
-/*input[min=1] {
-  width: 8em;
-	height: 3em;
-}*/
 
 input[type=submit] {
   width: 8em;
