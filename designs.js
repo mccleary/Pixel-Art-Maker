@@ -3,6 +3,7 @@
 
 // When size is submitted by the user, call makeGrid()
 
+// make sure code does not run until the DOM is ready
 $(document).ready(function() {
 
   let height, width, color, table, isColoring;
