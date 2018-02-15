@@ -8,7 +8,6 @@ html {
   background: url("https://png.pngtree.com/thumb_back/fw800/back_pic/04/01/15/08580066565256e.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 100%;
-  overflow: hidden;
   color: white;
 }
 
@@ -55,11 +54,11 @@ h2 {
     background-repeat: ;
 }
 
-h2:first-of-type {
+/* h2:first-of-type {
   margin-top: 0.5em;
-}
+} */
 
-#sizePicker {
+#size_picker {
 	font-size: 25px;
 }
 

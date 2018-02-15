@@ -5,63 +5,53 @@
 
 $(document).ready(function() {
 
-	let height, width, table, color, isColoring, size;
-	height = $('#input_height');
-	width = $('#input_width');
-	color = $('#color_picker');
-	size = $('#sizePicker');
-	table = $('#pixel_canvas');
-	isColoring = false;
+  let height, width, color, table, isColoring;
+  isColoring = false;
 
-	function makeGrid() {
-		$('#pixel_canvas').children().remove();
-	  // create rows
-		for (var h = 0; h <= height.val(); h++){
-	    table.append("<tr></tr>");
-	    // create columns
-			for (var w = 0; w <= width.val(); w++){
-	      $("tr").last().append("<td></td>");
-			}
-		}
-	}
+  $('#submit').click(function(event) {
+    event.preventDefault();
+    height = $('#input_height').val();
+    width = $('#input_width').val();
+    color = $('#color_picker').val();
+    table = $('#pixel_canvas');
+    table.children().remove();
+    makeGrid();
+  });
 
-	// clears grid when submit is clicked
-	$('#sizePicker').submit(function(){
-		event.preventDefault();
-		makeGrid();
-		dragColor();
-	});
+  function makeGrid() {
+    // create rows
+    for(var h = 0; h <= height; h++){
+      table.append('<tr></tr>');
+      // create columns
+      for(var w = 0; w <= width; w++) {
+        $('tr').last().append('<td></td>');
+      }
+    }
+    dragColor();
+  }
 
-	// applies selected color in clicked grid cell
-	$('body').on('click', 'td',  function fillSquare(){
-		$(this).css('background', $('#colorPicker').val());
-	});
-
-
-    $("#color-picker").change(function() {
-        color = $("#color-picker").val();
+  function dragColor(){
+    table.on('mousedown', 'td', function() {
+      mouseDown = true;
     });
 
-		// fills entire grid with selected color - not working
-		$("#fill").click(function () {
-			table.children().find("td").css("background-color", color);
-		});
+    $(document).mouseup(function() {
+      mouseDown = false;
+    });
 
-		// drag mouse ability: - not working
-		function dragColor() {
-			table.on("mousedown", "td", function() {
-				isColoring = true;
-			})
+    table.on('mousemove', 'td', function() {
+      if(mouseDown) {
+        $(this).css('background-color', color);
+      }
+    });
+  }
 
-			$(document).mouseup(function() {
-				isColoring = false;
-			})
+  $('#color_picker').change(function() {
+    color = $('#color_picker').val();
+  });
 
-			table.on("mousemove", "td", function() {
-				if (isColoring) {
-				$(this).css("background-color", color);
-				}
-			})
-		}
+  $('#fill').click(function() {
+    table.children().find('td').css('background-color', color);
+  });
 
 });
